@@ -1,3 +1,33 @@
-<p>
-  vehiculos-list works!
-</p>
+<div class="container my-4">
+  <header class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="mb-0">TuSegundazo.com</h3>
+    <img class="img-fluid d-none d-md-block" style="max-height:120px"
+         src="assets/img/banner-vehiculos.png"
+         alt="banner autos" />
+  </header>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead class="table-dark">
+        <tr>
+          <th style="width:60px">#</th>
+          <th>Marca</th>
+          <th>Línea</th>
+          <th>Modelo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let v of vehiculos; index as i" class="align-middle">
+          <td>{{ i + 1 }}</td>
+          <td>{{ v.marca }}</td>
+          <td>{{ v.linea }}</td>
+          <td>{{ v.modelo }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="text-center mt-4 small text-muted">
+    Contact us: +57 300000000- info&#64;tusegundazo.com - &#64;tusegundazo
+  </footer>
+</div>
